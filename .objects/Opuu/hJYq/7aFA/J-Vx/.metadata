@@ -1,0 +1,13 @@
+﻿{
+  "Id": "J-Vx2n1-B02VMiLbc932pw",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/J-Vx2n1-B02VMiLbc932pw",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/7aFAqMgYi0C04SWjN_ctTw",
+  "Name": "TABLE_DATA",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-05-25T06:32:46.9379861Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-25T06:32:46.9379861Z"
+}

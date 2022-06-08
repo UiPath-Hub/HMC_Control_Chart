@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=ControlChartItemsList&amp;_iframename=list" ContentHash="J2ll7k8rwU6RkRgpe5VDuw" DesignTimeRectangle="32, 416, 16, 16" ElementType="RadioButton" FriendlyName="'INPUT 210903-00009'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='radio' aaname='' /&gt;" Guid="61acb544-54aa-425f-9108-929e435c68f8" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='6741-1516' title='ControlChartItems List' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="21, 411, 44, 31" FriendlyName="'TD __pr0_sc'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl id='list_list' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl id='list_list' tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">1RZPWUcO3Fk-QUgCHJMuE2g</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0IvWxqC-XZ0eQbgGF4S-mEg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="df06bf0a8344238166f30bd336e40279.png" xmlns="">0VAQccqB8zUGCmgDzVGEoNQ</imageRef>
+</TargetAnchorable>

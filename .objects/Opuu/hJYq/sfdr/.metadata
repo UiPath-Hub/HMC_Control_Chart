@@ -1,0 +1,12 @@
+﻿{
+  "Id": "sfdr9xPiz0mrInYS9QlveQ",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/sfdr9xPiz0mrInYS9QlveQ",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/hJYqT4cKpECkJ0iUH41KrA",
+  "Name": "Chrome: LIMS Menu",
+  "Type": "Screen",
+  "Created": "2022-05-24T09:11:59.6872349Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-24T09:11:59.6872349Z"
+}

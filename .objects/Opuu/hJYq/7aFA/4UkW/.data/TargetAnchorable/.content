@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=200121-00001&amp;startdt=22/01/20&amp;enddt=22/01/23&amp;keycache=0.390912048257352931653539068108" ContentHash="0YJSqHPBZ0CHk3rw0G8iRg" DesignTimeRectangle="239, 595, 375, 25" ElementType="Text" FriendlyName="'3.311'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='ucl' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='ucl' tag='DIV' type='' aaname='3.311' check:text='3.311' /&gt;" Guid="1c21b451-bdd4-4475-9d9e-2c93cbce7484" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="37, 571, 180, 50" ElementType="Text" FriendlyName="'UCL'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;UCL &amp;#x9;&amp;#x9;&amp;#x9;' check:text='UCL' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">1ZRj-U1N8uUq6ua-kG7skbg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0n8-wsP9kakuK2vacSk8X_A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="2c51ed9d40aae41de42e5de2e4d0b0ed.png" xmlns="">0mNI-jq-SuU-k-XXwuLxNVA</imageRef>
+</TargetAnchorable>

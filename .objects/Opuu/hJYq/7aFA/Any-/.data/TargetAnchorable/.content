@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=200121-00001&amp;startdt=22/01/20&amp;enddt=22/01/23&amp;keycache=0.390912048257352931653539068108" ContentHash="_4bNf2Q320WFDKACZH5kcw" DesignTimeRectangle="239, 179, 375, 25" ElementType="Text" FriendlyName="'Xylene soluble'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='workstdid' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='workstdid' tag='DIV' type='' aaname='Xylene soluble' check:text='Xylene soluble' /&gt;" Guid="f9fee592-311c-493d-b1bb-18e6242ffb6a" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="37, 155, 180, 50" ElementType="Text" FriendlyName="'ID'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;ID &amp;#x9;&amp;#x9;&amp;#x9;' check:text='ID' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">11VybTiwtXUecaJf9kksGQQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0ICjFdz17E0iExUgOx_X0LQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="4e5236605714de009f1f38e745e14978.png" xmlns="">0rUUgpH9bv0y4VWrjfknelA</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "vk11-v0ZRk6fVQ-YLcOeEA",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/vk11-v0ZRk6fVQ-YLcOeEA",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/7aFAqMgYi0C04SWjN_ctTw",
+  "Name": "TEXT_AVG",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-06-06T11:59:56.9563297Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-06-06T11:59:56.9563297Z"
+}

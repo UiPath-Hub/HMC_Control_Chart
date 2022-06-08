@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc" ContentHash="Kt9BiqESskeYEMrqvAPu3w" DesignTimeRectangle="425, 685, 106, 43" FriendlyName="'Control Chart'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='menu3_node' parentid='contenttable10' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='menu3_node' parentid='contenttable10' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='                                                     Control Chart                                                                                                      ' check:text='Control Chart' /&gt;" Guid="f39a91c6-39fd-4ce8-b27b-ca8517e9b877" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='6741-1516' title='LIMS Menu' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="86, 669, 80, 20" ElementType="Text" FriendlyName="'QC Sample'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl parentid='tab33_tramline' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl parentid='tab33_tramline' tag='A' type='' aaname='                                                     QC Sample                                                 ' check:text='QC Sample' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">1cXu2ARsxO0a_8xX-kOJmTg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0QDUzSkizokq_inTiePBQ-g</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="58246fe0971b628877b0350030b4a1a8.png" xmlns="">0E16YtIESC0S1wXYlVzOBug</imageRef>
+</TargetAnchorable>

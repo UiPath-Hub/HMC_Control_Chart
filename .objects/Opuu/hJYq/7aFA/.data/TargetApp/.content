@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="240, 153, 1463, 816" BrowserType="Chrome" ContentHash="Af4m4Oppx0CiOmhRSJVHJA" Selector="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart'/&gt;" Url="[strHost+&quot;/lims/rc?command=page&quot;]" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0Oc6GA-Bow0WHdn_vd1m6Vw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="47c1c1e8c00119c3dd8039b4e2c7b5d1.png" xmlns="">0fvyuE18vFEmthNvs32G24w</imageRef>
+</TargetApp>

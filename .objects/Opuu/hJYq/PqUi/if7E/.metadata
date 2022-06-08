@@ -1,0 +1,13 @@
+﻿{
+  "Id": "if7Enl_sp0-ed8PqIbCewQ",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/if7Enl_sp0-ed8PqIbCewQ",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/PqUij4fSOUKWlvEBWQjbrQ",
+  "Name": "INPUT_PASSWORD",
+  "Type": "Element",
+  "TaxonomyType": "Password",
+  "Created": "2022-05-24T08:17:37.4434757Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-24T08:17:37.4434757Z"
+}

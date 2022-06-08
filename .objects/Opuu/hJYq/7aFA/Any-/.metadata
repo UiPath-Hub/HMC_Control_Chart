@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Any-A7czsUKKrnvhGlJY7w",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/Any-A7czsUKKrnvhGlJY7w",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/7aFAqMgYi0C04SWjN_ctTw",
+  "Name": "TEXT_ID_NAME",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-05-26T06:37:30.9730439Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-26T06:37:30.9730439Z"
+}

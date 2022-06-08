@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=210903-00009&amp;startdt=01/09/21&amp;enddt=01/02/22&amp;keycache=0.278282506104620351653383959514" ContentHash="_5SgzBGd2kOxKnRcrVa0ZA" DesignTimeRectangle="594, 91, 153, 35" ElementType="InputBox" FriendlyName="'01/02/2022'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='enddate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='enddate' tag='INPUT' type='text' aaname='datepicker' /&gt;" Guid="4eed57d7-f1a1-499f-8e33-e9cc7efbd8d6" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="483, 95, 104, 22" ElementType="Text" FriendlyName="'End Date'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl aaname='  End Date  :  ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl aaname='  End Date  :  ' tag='LABEL' type='' check:text='End Date  :' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">132n0OwwywUmDUXxUmRRxDg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0Kg0Ra8CdG0yVsfkY4jba_w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="049175dada22542e0268183af4fa60ac.png" xmlns="">0qTavBiqE_02wzoySbqLRYg</imageRef>
+</TargetAnchorable>

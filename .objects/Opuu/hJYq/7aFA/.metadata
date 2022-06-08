@@ -1,0 +1,14 @@
+﻿{
+  "Id": "7aFAqMgYi0C04SWjN_ctTw",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/7aFAqMgYi0C04SWjN_ctTw",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/hJYqT4cKpECkJ0iUH41KrA",
+  "Name": "Chrome Control Chart",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2022-05-25T06:29:35.7053799Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-25T06:29:35.7053799Z"
+}

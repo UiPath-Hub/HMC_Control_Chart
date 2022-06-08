@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=200121-00002&amp;startdt=22/01/20&amp;enddt=22/01/23&amp;keycache=0.054722342629216491654512951935" ContentHash="QlAWcw2QB0GrHMt8WLLDwQ" DesignTimeRectangle="239, 543, 375, 25" ElementType="Text" FriendlyName="'2.9602'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='avg' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='avg' tag='DIV' type='' aaname='2.9602' check:text='2.9602' /&gt;" Guid="b6292685-633a-4849-a6a6-a0b1511a0613" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="37, 519, 180, 50" ElementType="Text" FriendlyName="'Avg'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Avg &amp;#x9;&amp;#x9;&amp;#x9;' check:text='Avg' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">1snLat7z_LE-8t78cfef8zg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0gtFq47foIUaKZAJv1eoV2w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="f22ff35aadaa6c2a3847bc8cea7a8417.png" xmlns="">0zBdbu851ik-39dd_H_vqsw</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "1SMffS8w9kSSCOtdfe2O4A",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/1SMffS8w9kSSCOtdfe2O4A",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/sfdr9xPiz0mrInYS9QlveQ",
+  "Name": "BUTTON_CONTROL_CHART",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2022-05-24T09:11:59.7311154Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-24T09:11:59.7311154Z"
+}

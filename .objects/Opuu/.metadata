@@ -1,0 +1,14 @@
+﻿{
+  "Id": "OpuueZuwnU6QzVLw3187og",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/OpuueZuwnU6QzVLw3187og",
+  "Name": "HMC_Control_Chart",
+  "Type": "App",
+  "Created": "2022-05-24T08:05:33.3827013Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-24T09:24:23.7868281Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

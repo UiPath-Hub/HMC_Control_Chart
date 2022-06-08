@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/logon.jsp" ContentHash="Dy3VmGxv6EyZbgvAOwEBzA" DesignTimeRectangle="999, 705, 188, 66" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' id='submitlogin' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' id='submitlogin' type='button' aaname='                                 Sign in                             ' check:text='Sign in' /&gt;" Guid="4a8827b4-2868-4a4e-9521-c6681fdc1b57" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='26c6-b085' title='LabVantage Logon' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0os9HqNYjIUeYbnz4p_-YrQ</imageRef>
+</TargetAnchorable>

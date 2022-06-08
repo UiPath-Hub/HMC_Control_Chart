@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Baw9x9KaFk6890KFZlrkCw",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/Baw9x9KaFk6890KFZlrkCw",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/7aFAqMgYi0C04SWjN_ctTw",
+  "Name": "BUTTON_VIEW_CONTROL_CHART",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2022-05-25T06:32:46.4180077Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-05-25T06:32:46.4180077Z"
+}

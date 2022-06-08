@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="KwRjuoax-kCdGA9yh7pSPA" DesignTimeRectangle="32, 134, 1250, 4705" FriendlyName="'No. Sample'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='tbldata' tag='TABLE' /&gt;" Guid="161f2f2d-6db8-4b43-90ac-731293cfba9b" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="8e54924a2fb33f2c10eeec976b425706.png" xmlns="">0kb7lGtk8vkeAURRkSQ1i4w</imageRef>
+</TargetAnchorable>
