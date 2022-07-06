@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="F8Jh9wvOAUG09NaQfZEpcg" DesignTimeRectangle="1871, 9, 58, 37" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='*' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ControlChartItems List - Google Chrome - Only J' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="61c72b5d-4a6e-457b-81dc-f11bdf886acf" Reference="hXRIDoZ-JUO8jubA8vBAGQ/C_JV300otEOn12dYI1nKTQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ControlChartItems List - Google Chrome' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0d6jmkaWQq0WlHVccK-L7SA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="75d1867f4919e313d84f5cf828c397c1.png" xmlns="">0lhMigVG_e0GsuvvW4EQhDg</imageRef>
+</TargetAnchorable>

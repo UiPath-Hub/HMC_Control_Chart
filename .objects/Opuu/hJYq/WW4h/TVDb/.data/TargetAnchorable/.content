@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page" ContentHash="rf0kLg06XEytjZQXMwf2pQ" DesignTimeRectangle="63, 259, 106, 22" ElementType="Text" FriendlyName="'Control Chart'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl aaname='Control Chart' parentid='Control Chart' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl aaname='Control Chart' parentid='Control Chart' tag='DIV' type='' check:text='Control Chart' /&gt;" Guid="1e279a61-a180-49d2-b05e-4481586b9d3f" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='6741-1516' title='ControlChartItems List' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0omY7UnVlrkGfRxW2LhBLBw</imageRef>
-</TargetAnchorable>

@@ -1,13 +1,14 @@
 {
   "name": "HMC_Control_Chart",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "StateMachine.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[1.6.1]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.System.Activities": "[21.10.4]",
-    "UiPath.UIAutomation.Activities": "[21.10.5]"
+    "UiPath.UIAutomation.Activities": "[21.10.5]",
+    "UiPath.Word.Activities": "[1.10.1]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -46,8 +47,14 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "c2b549ed-edd3-4ef6-af31-24ac8abf46d5",
+      "filePath": "StateMachine.xaml",
+      "uniqueId": "87eb3ccd-a601-42a7-8bf3-53a1e84bf5a4",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "WorkFlow\\Main.xaml",
+      "uniqueId": "aaf7ab22-3274-4a78-9d03-4bd1903c3fd2",
       "input": [],
       "output": []
     }

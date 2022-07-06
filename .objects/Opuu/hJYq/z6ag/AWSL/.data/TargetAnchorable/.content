@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=ControlChartItemsList&amp;_iframename=list" ContentHash="QorwCRvOH0ONGtyXSqOYMg" DesignTimeRectangle="32, 416, 16, 16" ElementType="RadioButton" FriendlyName="'INPUT 200121-00002'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' type='radio' aaname='' /&gt;" Guid="658c0bb6-44f9-459e-ba7f-e4024fe2efb1" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='8863-1c6' title='ControlChartItems List' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="20, 373, 30, 40" FriendlyName="'DIV list_header0div'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl id='list_header0div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl id='list_iframe' tag='IFRAME' /&gt;&lt;webctrl id='list_header0div' tag='DIV' type='' aaname='' /&gt;" SearchSteps="Selector">
+        <imageRef attrName="ImageBase64" xmlns="">121jIpuyO3kKTBjjtJISfnQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0k5Dq9SMdIk6Qulkuhmv5KQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="7cb147ff7776f4dd4450f4c9ec05ab64.png" xmlns="">0277Eh4PBoEymFaKrjvsRTQ</imageRef>
+</TargetAnchorable>

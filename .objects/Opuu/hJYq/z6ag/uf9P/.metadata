@@ -1,0 +1,13 @@
+﻿{
+  "Id": "uf9Pb0muzEGSgA8PQnguAA",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/uf9Pb0muzEGSgA8PQnguAA",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/z6agJZ47MEmoUOrAEk1UxA",
+  "Name": "INPUT_SEARCH_ITEMID",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2022-06-09T10:44:35.634112Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-06-09T10:44:35.634112Z"
+}

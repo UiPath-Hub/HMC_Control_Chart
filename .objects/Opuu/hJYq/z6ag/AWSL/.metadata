@@ -1,0 +1,13 @@
+﻿{
+  "Id": "AWSLkxeXPE-ADIoQpT8IiA",
+  "Reference": "hXRIDoZ-JUO8jubA8vBAGQ/AWSLkxeXPE-ADIoQpT8IiA",
+  "ParentRef": "hXRIDoZ-JUO8jubA8vBAGQ/z6agJZ47MEmoUOrAEk1UxA",
+  "Name": "RADIOBUTTOM_ITEM",
+  "Type": "Element",
+  "TaxonomyType": "RadioButton",
+  "Created": "2022-06-09T10:44:35.6767704Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-06-09T10:44:35.6767704Z"
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" ContentHash="UhjM6xs_SU2vjAw2YvKJlA" Reference="hXRIDoZ-JUO8jubA8vBAGQ/PqUij4fSOUKWlvEBWQjbrQ" Selector="&lt;html app='chrome.exe' htmlwindowname='26c6-b085' title='LabVantage Logon' /&gt;" Url="[strURL]" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="IconBase64" xmlns="">0g4-cs8fWIk-R2n2tTBlEeQ</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="1ffa2dc477b4e39c061a6d2d3f8fc476.png" xmlns="">0pDXaSuN7IESzJcyecq-5xA</imageRef>
+<TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" ContentHash="sAaoH8-zmEaUhef-behn4A" Reference="hXRIDoZ-JUO8jubA8vBAGQ/PqUij4fSOUKWlvEBWQjbrQ" Selector="&lt;html app='chrome.exe' htmlwindowname='26c6-b085' title='LabVantage Logon' /&gt;" Url="[strURL]" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0wQwlmtdW40m-1AoOvddF9w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="1ffa2dc477b4e39c061a6d2d3f8fc476.png" xmlns="">0TFe7BnD8mUS_3OZl_Bf4DA</imageRef>
 </TargetApp>

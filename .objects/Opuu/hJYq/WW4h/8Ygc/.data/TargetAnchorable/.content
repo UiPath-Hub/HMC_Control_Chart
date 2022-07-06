@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page" ContentHash="tnqGgISiHESOn1OpWNeUUw" DesignTimeRectangle="37, 304, 233, 33" ElementType="InputBox" FriendlyName="'mf'" FullSelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl parentid='listtopsearchelement' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='_nav_frame1' tag='IFRAME' /&gt;&lt;webctrl parentid='listtopsearchelement' tag='INPUT' type='text' aaname='' /&gt;" Guid="be492c16-79ec-4ba3-9f97-2bd7f0bcaa73" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='6741-1516' title='ControlChartItems List' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0ncEaTWD8cEqwj_LFmMkSAg</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="0d6080d05974a017e9f8327a96caa06a.png" xmlns="">0gII7XsGCzEOefs7Q6BxGnA</imageRef>
-</TargetAnchorable>
