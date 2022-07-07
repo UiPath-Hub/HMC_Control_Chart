@@ -378,7 +378,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[(systemError is Nothing) AND (businessError is Nothing)]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="133.6,61.6" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID2" DisplayName="Process" sap:VirtualizedContainerService.HintSize="901.6,1652.8" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <Sequence sap:VirtualizedContainerService.HintSize="856.8,1264" sap2010:WorkflowViewState.IdRef="Sequence_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -387,7 +387,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="815.2,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Server=DESKTOP-GRBI82A\SQL_TEST;Database=SQL;User Id=SQL;Password=SQL1234;" DatabaseConnection="[sqlConnect]" />
+                          <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="815.2,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=hmcmtp-sqldev01;Initial Catalog=HMCRPA_TECHQA;Persist Security Info=True;User ID=uiadm;Password=UiP@r00t;" DatabaseConnection="[sqlConnect]" />
                           <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="815.2,101.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -692,9 +692,9 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.Condition>[not ((systemError is Nothing) AND (businessError is Nothing))]</Transition.Condition>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID1" DisplayName="Error Handler" sap:VirtualizedContainerService.HintSize="1074.4,4494.4" sap2010:WorkflowViewState.IdRef="State_6">
+                                    <State x:Name="__ReferenceID1" DisplayName="Error Handler" sap:VirtualizedContainerService.HintSize="133.6,84.8" sap2010:WorkflowViewState.IdRef="State_6">
                                       <State.Entry>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="1029.6,4132.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="1029.6,4292.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -750,7 +750,7 @@
                                               </Sequence>
                                             </If.Else>
                                           </If>
-                                          <Sequence DisplayName="send Error mail" sap:VirtualizedContainerService.HintSize="988,3513.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                          <Sequence DisplayName="send Error mail" sap:VirtualizedContainerService.HintSize="988,3673.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:String" Name="strTemplateRead" />
                                               <Variable x:TypeArguments="x:String" Name="strErrorTempPath" />
@@ -783,8 +783,8 @@
                                                 </scg:List>
                                               </ui:MultipleAssign.AssignOperations>
                                             </ui:MultipleAssign>
-                                            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;delete&quot;+strErrorTempPath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="508.8,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[strErrorTempPath]" />
-                                            <p:WordApplicationScope CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[&quot;delete&quot;+strErrorTempPath]" sap:VirtualizedContainerService.HintSize="508.8,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
+                                            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[strErrorTempPath.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="508.8,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[strErrorTempPath]" />
+                                            <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[strErrorTempPath.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" sap:VirtualizedContainerService.HintSize="508.8,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
                                               <p:WordApplicationScope.Body>
                                                 <ActivityAction x:TypeArguments="ui:WordDocument">
                                                   <ActivityAction.Argument>
@@ -802,7 +802,7 @@
                                                 </ActivityAction>
                                               </p:WordApplicationScope.Body>
                                             </p:WordApplicationScope>
-                                            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="508.8,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;delete&quot;+strErrorTempPath]" />
+                                            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="508.8,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[strErrorTempPath.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" />
                                             <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot" sap:VirtualizedContainerService.HintSize="508.8,68.8" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[imgScreenShot]">
                                               <ui:TakeScreenshot.Target>
                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e7fc613a-111b-449d-8002-7a058b44fd71">
@@ -838,7 +838,7 @@
                                               </If.Else>
                                             </If>
                                             <ui:SaveImage DisplayName="Save Image" FileName="ErrorImage.png" sap:VirtualizedContainerService.HintSize="508.8,134.4" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[imgScreenShot]" />
-                                            <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="508.8,984.8" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[strTemplateRead]" SourceText="[strTemplateRead]">
+                                            <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="508.8,1144.8" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[strTemplateRead]" SourceText="[strTemplateRead]">
                                               <ui:ModifyText.Body>
                                                 <ActivityAction>
                                                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_24">
@@ -848,10 +848,11 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_1" ReplaceText="[strErrorMessage]" SearchText="&lt;$system error$&gt;" />
-                                                    <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_3" ReplaceText="[Now.ToString(&quot;HH:mm dd&quot;)]" SearchText="&lt;$DateTime$&gt;" />
+                                                    <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_3" ReplaceText="[Now.ToString(&quot;dd&quot;)]" SearchText="&lt;$Date$&gt;" />
                                                     <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_4" ReplaceText="[Environment.NewLine]" SearchText="&lt;br&gt;" />
                                                     <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_5" ReplaceText="[Now.ToString(&quot;MM&quot;)]" SearchText="&lt;$Month$&gt;" />
                                                     <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_6" ReplaceText="[Now.ToString(&quot;yyyy&quot;)]" SearchText="&lt;$Year$&gt;" />
+                                                    <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_7" ReplaceText="[Now.ToString(&quot;HH:mm&quot;)]" SearchText="&lt;$Time$&gt;" />
                                                   </Sequence>
                                                 </ActivityAction>
                                               </ui:ModifyText.Body>

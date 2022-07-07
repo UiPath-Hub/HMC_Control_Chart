@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1168,23011.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1168,25298.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -103,7 +103,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1178.4,22946.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1178.4,25233.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strURL" />
       <Variable x:TypeArguments="x:String" Name="strUserName" />
@@ -192,7 +192,7 @@
               <OutArgument x:TypeArguments="x:Int32">[intSubtractDate]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              <InArgument x:TypeArguments="x:Int32">[Cint(in_CONFIG("intSubtractDate").ToString)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -259,7 +259,7 @@
               <InArgument x:TypeArguments="ui:DatabaseConnection">[in_sqlConnect]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_47">
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_47">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:Int32">[intThisDayLimsReportCount]</OutArgument>
             </ui:AssignOperation.To>
@@ -446,15 +446,15 @@
                     </uix:NGetText.Text>
                   </uix:NGetText>
                 </Sequence>
-                <If Condition="[blFirstAccessLims]" sap:VirtualizedContainerService.HintSize="1026.4,413.6" sap2010:WorkflowViewState.IdRef="If_28">
+                <If Condition="[blFirstAccessLims]" sap:VirtualizedContainerService.HintSize="560,727.2" sap2010:WorkflowViewState.IdRef="If_28">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="472,224.8" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                    <Sequence sap:VirtualizedContainerService.HintSize="524.8,538.4" sap2010:WorkflowViewState.IdRef="Sequence_95">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="483.2,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_49">
@@ -465,7 +465,7 @@
                                 <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
-                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_50">
+                            <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_50">
                               <ui:AssignOperation.To>
                                 <OutArgument x:TypeArguments="x:Int32">[intThisDayLimsReportCount]</OutArgument>
                               </ui:AssignOperation.To>
@@ -476,6 +476,27 @@
                           </scg:List>
                         </ui:MultipleAssign.AssignOperations>
                       </ui:MultipleAssign>
+                      <If Condition="[intThisDayLimsReportCount = 0]" sap:VirtualizedContainerService.HintSize="483.2,304" sap2010:WorkflowViewState.IdRef="If_40">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_133">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Throw Exception="[New Exception(&quot;No Lims Sample data of Item ID: &quot;+strItemID+&quot; on &quot;+dateEndDate.ToString(strUserDateFormat))]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_134">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -736,18 +757,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Sequence DisplayName="Prepare data" sap:VirtualizedContainerService.HintSize="1136.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
+    <Sequence DisplayName="Prepare data" sap:VirtualizedContainerService.HintSize="1136.8,2448.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="intDataLack" />
         <Variable x:TypeArguments="s:DateTime" Name="dateTimeTemp" />
+        <Variable x:TypeArguments="x:String" Name="strInsertQuery" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[dtLimsData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="513.6,304" sap2010:WorkflowViewState.IdRef="If_25">
+      <If Condition="[dtLimsData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="505.6,304" sap2010:WorkflowViewState.IdRef="If_25">
         <If.Then>
           <Sequence sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_82">
             <sap:WorkflowViewStateService.ViewState>
@@ -755,7 +777,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Throw Exception="[New Exception(&quot;No new data.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_3" />
+            <Throw Exception="[New Exception(&quot;No new Lims Sample data of Item ID: &quot;+strItemID+&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_3" />
           </Sequence>
         </If.Then>
         <If.Else>
@@ -768,7 +790,7 @@
           </Sequence>
         </If.Else>
       </If>
-      <Assign sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+      <Assign sap:VirtualizedContainerService.HintSize="505.6,60" sap2010:WorkflowViewState.IdRef="Assign_18">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[intDataLack]</OutArgument>
         </Assign.To>
@@ -776,7 +798,7 @@
           <InArgument x:TypeArguments="x:Int32">[(15+intThisDayLimsReportCount)-dtLimsData.RowCount]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleWhile Condition="[intDataLack&lt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="513.6,548" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+      <ui:InterruptibleWhile Condition="[intDataLack&lt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="505.6,548" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
         <ui:InterruptibleWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="338.4,380.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
             <sap:WorkflowViewStateService.ViewState>
@@ -802,13 +824,23 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InterruptibleWhile>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtLimsData]" DisplayName="(loop) Insert data to SQL" sap:VirtualizedContainerService.HintSize="513.6,4236" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+      <Assign sap:VirtualizedContainerService.HintSize="505.6,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strInsertQuery]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtLimsData]" DisplayName="(loop) Insert data to SQL" sap:VirtualizedContainerService.HintSize="505.6,1094.4" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,4115.2" sap2010:WorkflowViewState.IdRef="Sequence_72">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="472,973.6" sap2010:WorkflowViewState.IdRef="Sequence_72">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="strInsertITEM_ID" />
                 <Variable x:TypeArguments="x:String" Name="strInserPARAMETER_NAME" />
@@ -829,7 +861,6 @@
                 <Variable x:TypeArguments="x:String" Name="strInsertERROR_TYPE" />
                 <Variable x:TypeArguments="x:String" Name="strInsertERROR_MSG" />
                 <Variable x:TypeArguments="x:String" Name="strInsertUPDATE_DATE" />
-                <Variable x:TypeArguments="x:String" Name="strInsertQuery" />
                 <Variable x:TypeArguments="x:String" Name="strInsertSAMPLING_DATE" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
@@ -1009,7 +1040,7 @@
                         <OutArgument x:TypeArguments="x:String">[strInsertQuery]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String" xml:space="preserve">["INSERT INTO [dbo].[LIMS_CTRLLOGS]  ([ITEM_ID]   ,[PARAMETER_NAME]           ,[SAMPLE_ID]           ,[CURRENT_VALUE]           ,[UCL_VALUE]           ,[LCL_VALUE]           ,[AVG_VALUE]           ,[NORMAL_VALUE]           ,[BEYOND_OVER]           ,[BEYOND_UNDER]           ,[BIAS_UWL]           ,[BIAS_LWL]           ,[TREND_UP]           ,[TREND_DOWN]           ,[OVER_CONTROL]           ,[CREATE_DATE],[SAMPLING_DATE]           )     VALUES           ('strInsertITEM_ID'           ,'strInserPARAMETER_NAME'           ,'strInsertSAMPLE_ID'           ,strInsertCURRENT_VALUE           ,strInsertUCL_VALUE           ,strInsertLCL_VALUE           ,strInsertAVG_VALUE           ,strInsertNORMAL_VALUE           ,strInsertBEYOND_OVER           ,strInsertBEYOND_UNDER           ,strInsertBIAS_UWL           ,strInsertBIAS_LWL           ,strInsertTREND_UP           ,strInsertTREND_DOWN           ,strInsertOVER_CONTROL           ,'strInsertCREATE_DATE' ,'strInsertSAMPLING_DATE'           )"]</InArgument>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[strInsertQuery+ "INSERT INTO [dbo].[LIMS_CTRLLOGS]  ([ITEM_ID]   ,[PARAMETER_NAME]           ,[SAMPLE_ID]           ,[CURRENT_VALUE]           ,[UCL_VALUE]           ,[LCL_VALUE]           ,[AVG_VALUE]           ,[NORMAL_VALUE]           ,[BEYOND_OVER]           ,[BEYOND_UNDER]           ,[BIAS_UWL]           ,[BIAS_LWL]           ,[TREND_UP]           ,[TREND_DOWN]           ,[OVER_CONTROL]           ,[CREATE_DATE],[SAMPLING_DATE]           )     VALUES           ('strInsertITEM_ID'           ,'strInserPARAMETER_NAME'           ,'strInsertSAMPLE_ID'           ,strInsertCURRENT_VALUE           ,strInsertUCL_VALUE           ,strInsertLCL_VALUE           ,strInsertAVG_VALUE           ,strInsertNORMAL_VALUE           ,strInsertBEYOND_OVER           ,strInsertBEYOND_UNDER           ,strInsertBIAS_UWL           ,strInsertBIAS_LWL           ,strInsertTREND_UP           ,strInsertTREND_DOWN           ,strInsertOVER_CONTROL           ,'strInsertCREATE_DATE' ,'strInsertSAMPLING_DATE')"+Environment.NewLine]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -1021,8 +1052,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MultipleAssign>
-              <Delay Duration="00:00:00.0100000" sap:VirtualizedContainerService.HintSize="438.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
-              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="438.4,3064.8" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[strInsertQuery]" SourceText="[strInsertQuery]">
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="430.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="430.4,52.8" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[strInsertQuery]" SourceText="[strInsertQuery]">
                 <ui:ModifyText.Body>
                   <ActivityAction>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_76">
@@ -1054,16 +1085,11 @@
                 </ui:ModifyText.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ModifyText>
-              <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Insert new Data query" ExistingDbConnection="[sqlConnect]" sap:VirtualizedContainerService.HintSize="438.4,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="[strInsertQuery]">
-                <ui:ExecuteQuery.Parameters>
-                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                </ui:ExecuteQuery.Parameters>
-              </ui:ExecuteQuery>
             </Sequence>
           </ActivityAction>
         </ui:ForEachRow.Body>
@@ -1074,6 +1100,11 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
+      <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Insert new Data query" ExistingDbConnection="[sqlConnect]" sap:VirtualizedContainerService.HintSize="505.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="[strInsertQuery]">
+        <ui:ExecuteQuery.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:ExecuteQuery.Parameters>
+      </ui:ExecuteQuery>
     </Sequence>
     <Assign sap:VirtualizedContainerService.HintSize="1136.8,60" sap2010:WorkflowViewState.IdRef="Assign_28">
       <Assign.To>
@@ -1112,27 +1143,6 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
     </ui:ExecuteQuery>
-    <If Condition="[dtPresentData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="1136.8,304" sap2010:WorkflowViewState.IdRef="If_31">
-      <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_108">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[New Exception(&quot;No New Data.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_5" />
-        </Sequence>
-      </If.Then>
-      <If.Else>
-        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_109">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </Sequence>
-      </If.Else>
-    </If>
     <Assign sap:VirtualizedContainerService.HintSize="1136.8,60" sap2010:WorkflowViewState.IdRef="Assign_31">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dtPresentData]</OutArgument>
@@ -1141,13 +1151,13 @@
         <InArgument x:TypeArguments="sd:DataTable">[dtPresentData.AsEnumerable.Reverse.CopyToDataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtPresentData]" DisplayName="(loop) Query Present Data to Analyze" sap:VirtualizedContainerService.HintSize="1136.8,6960" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtPresentData]" DisplayName="(loop) Query Present Data to Analyze" sap:VirtualizedContainerService.HintSize="1136.8,7211.2" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="712,6839.2" sap2010:WorkflowViewState.IdRef="Sequence_98">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="712,7090.4" sap2010:WorkflowViewState.IdRef="Sequence_98">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1190,7 +1200,7 @@
                 <InArgument x:TypeArguments="sd:DataTable">[dtReadyData.AsEnumerable.Reverse.CopyToDataTable]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[not dtReadyData.RowCount = 16]" DisplayName="not dtReadyData.RowCount = 16" sap:VirtualizedContainerService.HintSize="670.4,52.8" sap2010:WorkflowViewState.IdRef="If_29">
+            <If Condition="[not dtReadyData.RowCount = 16]" DisplayName="not dtReadyData.RowCount = 16" sap:VirtualizedContainerService.HintSize="483.2,304" sap2010:WorkflowViewState.IdRef="If_29">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1204,7 +1214,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[New Exception(&quot;Query SQL data lack. !=16&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                  <Throw Exception="[New Exception(&quot;Query SQL data incorrect.(!=16)&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_4" />
                 </Sequence>
               </If.Then>
               <If.Else>
@@ -1772,7 +1782,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Throw Exception="[New Exception(&quot;Weekly Item ID and LIMS_CTRLCHTM is not Matching&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                                  <Throw Exception="[New Exception(&quot;Weekly Item ID Template and LIMS_CTRLCHTM is not Matching&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_6" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
@@ -1797,7 +1807,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <If Condition="[Cint( strSamplingMonth) = CInt(dtWeeklyTableHeader.Rows(0).Item(HeaderIndex).ToString)]" sap:VirtualizedContainerService.HintSize="1835.2,2224" sap2010:WorkflowViewState.IdRef="If_37">
+                                    <If Condition="[Cint( strSamplingMonth) = CInt(dtWeeklyTableHeader.Rows(0).Item(HeaderIndex).ToString)]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_37">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

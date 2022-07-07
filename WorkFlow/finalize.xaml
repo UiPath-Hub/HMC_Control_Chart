@@ -151,8 +151,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;delete&quot;+ in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="659.2,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString]" />
-            <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[&quot;delete&quot;+ in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString]" sap:VirtualizedContainerService.HintSize="659.2,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2" ReadOnly="True">
+            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="659.2,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString]" />
+            <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" sap:VirtualizedContainerService.HintSize="659.2,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
               <p:WordApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WordDocument">
                   <ActivityAction.Argument>
@@ -170,7 +170,7 @@
                 </ActivityAction>
               </p:WordApplicationScope.Body>
             </p:WordApplicationScope>
-            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="659.2,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[&quot;delete&quot;+ in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString]" />
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="659.2,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[in_CONFIG(&quot;strMailTriggerReportTemp&quot;).ToString.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" />
             <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="659.2,344.8" sap2010:WorkflowViewState.IdRef="ModifyText_6" OutputText="[strTemplateRead]" SourceText="[strTemplateRead]">
               <ui:ModifyText.Body>
                 <ActivityAction>
@@ -498,8 +498,8 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;delete&quot;+in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="782.4,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" />
-      <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[&quot;delete&quot;+in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" sap:VirtualizedContainerService.HintSize="782.4,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_3" ReadOnly="True">
+      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="782.4,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" />
+      <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" sap:VirtualizedContainerService.HintSize="782.4,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_3">
         <p:WordApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WordDocument">
             <ActivityAction.Argument>
@@ -517,7 +517,7 @@
           </ActivityAction>
         </p:WordApplicationScope.Body>
       </p:WordApplicationScope>
-      <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="782.4,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;delete&quot;+in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" />
+      <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="782.4,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString.Split(&quot;.&quot;c).First+&quot;delete.docx&quot;]" />
       <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="782.4,344.8" sap2010:WorkflowViewState.IdRef="ModifyText_7" OutputText="[strTemplateRead]" SourceText="[strTemplateRead]">
         <ui:ModifyText.Body>
           <ActivityAction>

@@ -106,7 +106,7 @@
         <Variable x:TypeArguments="x:String" Name="strDomainName" />
         <Variable x:TypeArguments="x:String" Name="strServerMail" />
         <Variable x:TypeArguments="x:String" Name="strMailSenderName" />
-        <Variable x:TypeArguments="x:String" Name="strPassword" />
+        <Variable x:TypeArguments="ss:SecureString" Name="strPassword" />
         <Variable x:TypeArguments="x:String" Name="strCC" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
@@ -138,7 +138,7 @@
                 <OutArgument x:TypeArguments="x:String">[strEmailUserName]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_CONFIG("strSenderMail").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_CREDENTIALLIST("MailSenderLogin").ElementAt(0).key]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -159,10 +159,10 @@
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[strPassword]</OutArgument>
+                <OutArgument x:TypeArguments="ss:SecureString">[strPassword]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_CONFIG("strSenderMailPassword").ToString]</InArgument>
+                <InArgument x:TypeArguments="ss:SecureString">[in_CREDENTIALLIST("MailSenderLogin").ElementAt(0).Value]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
@@ -197,7 +197,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[in_BODY]" Cc="[strCC]" DisplayName="Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendExchangeMail_2" IsBodyHtml="True" IsDraft="False" Name="[strMailSenderName]" Password="[strPassword]" SaveCopy="False" Server="[strServerMail]" Subject="[strSubject]" To="[strEmailAddress]" User="[strEmailUserName]" />
+            <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[in_BODY]" Cc="[strCC]" DisplayName="Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendExchangeMail_2" IsBodyHtml="True" IsDraft="False" Name="[strMailSenderName]" SaveCopy="False" SecurePassword="[strPassword]" Server="[strServerMail]" Subject="[strSubject]" To="[strEmailAddress]" User="[strEmailUserName]" />
           </Sequence>
         </If.Then>
         <If.Else>
@@ -208,7 +208,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[in_BODY]" Cc="[strCC]" DisplayName="Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="384,146.4" sap2010:WorkflowViewState.IdRef="SendExchangeMail_4" IsBodyHtml="True" IsDraft="False" Name="[strMailSenderName]" Password="[strPassword]" SaveCopy="False" Server="[strServerMail]" Subject="[strSubject]" To="[strEmailAddress]" User="[strEmailUserName]">
+            <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[in_BODY]" Cc="[strCC]" DisplayName="Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="384,146.4" sap2010:WorkflowViewState.IdRef="SendExchangeMail_4" IsBodyHtml="True" IsDraft="False" Name="[strMailSenderName]" SaveCopy="False" SecurePassword="[strPassword]" Server="[strServerMail]" Subject="[strSubject]" To="[strEmailAddress]" User="[strEmailUserName]">
               <ui:SendExchangeMail.Files>
                 <InArgument x:TypeArguments="x:String">[in_ATTACH_FILE]</InArgument>
               </ui:SendExchangeMail.Files>
