@@ -11,7 +11,7 @@
   "UiPath.UIAutomationNext.Activities.SearchStepsWnd.Image": "True",
   "UiPath.UIAutomationNext.Activities.SearchStepsWnd.Anchors": "True",
   "UiPath.UIAutomationNext.Activities.SearchStepsWnd.IgnoreSelectorsWithIdx": "True",
-  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.EdgeInteractionMode": "DebuggerApi",
+  "UiPath.UIAutomationNext.Activities.SearchStepsWeb.EdgeInteractionMode": "HardwareEvents",
   "UiPath.UIAutomationNext.Activities.SearchStepsWeb.InteractionMode": "Simulate",
   "UiPath.UIAutomationNext.Activities.SearchStepsWeb.FullSelector": "False",
   "UiPath.UIAutomationNext.Activities.SearchStepsWeb.FuzzySelector": "True",
