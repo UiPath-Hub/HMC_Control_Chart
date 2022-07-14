@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1184,28355.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1184,28437.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -103,7 +103,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1194.4,28290.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1194.4,28372.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strURL" />
       <Variable x:TypeArguments="x:String" Name="strUserName" />
@@ -176,7 +176,7 @@
               <OutArgument x:TypeArguments="x:String">[strStartDate]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">11/09/2021</InArgument>
+              <InArgument x:TypeArguments="x:String">14/09/2021</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
@@ -184,7 +184,7 @@
               <OutArgument x:TypeArguments="x:String">[strEndDate]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">11/09/2021</InArgument>
+              <InArgument x:TypeArguments="x:String">14/09/2021</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_40">
@@ -334,22 +334,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Control Chart" sap:VirtualizedContainerService.HintSize="1152.8,6156.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="7d64b8ea-0d8f-4db2-afd4-91bd4a44e9f9" Version="V1" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Control Chart" sap:VirtualizedContainerService.HintSize="1152.8,6171.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="7d64b8ea-0d8f-4db2-afd4-91bd4a44e9f9" Version="V1" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <ui:InterruptibleWhile Condition="True" DisplayName="get new Data" sap:VirtualizedContainerService.HintSize="1116,5940" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile Condition="True" DisplayName="get new Data" sap:VirtualizedContainerService.HintSize="1116,5954.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1080.8,5772.8" sap2010:WorkflowViewState.IdRef="Sequence_55">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1080.8,5787.2" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1039.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_9" />
-                <Sequence DisplayName="UI" sap:VirtualizedContainerService.HintSize="1039.2,1807.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="UI" sap:VirtualizedContainerService.HintSize="1039.2,1814.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -367,7 +367,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT_END_DATE'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[dateEndDate.ToString( strUserDateFormat)]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT_END_DATE'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[dateEndDate.ToString( strUserDateFormat)]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=210903-00009&amp;startdt=01/09/21&amp;enddt=01/02/22&amp;keycache=0.278282506104620351653383959514" ContentHash="_5SgzBGd2kOxKnRcrVa0ZA" DesignTimeRectangle="594, 91, 153, 35" ElementType="InputBox" FriendlyName="'01/02/2022'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='enddate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='enddate' tag='INPUT' type='text' aaname='datepicker' /&gt;" Guid="4eed57d7-f1a1-499f-8e33-e9cc7efbd8d6" ImageBase64="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" InformativeScreenshot="049175dada22542e0268183af4fa60ac.png" IsResponsive="True" Reference="hXRIDoZ-JUO8jubA8vBAGQ/MmwbNdSkMEaqBkTOnyS70g" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector">
                         <uix:TargetAnchorable.Anchors>
@@ -378,7 +378,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON_VIEW_CONTROL_CHART'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON_VIEW_CONTROL_CHART'" sap:VirtualizedContainerService.HintSize="334.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=210903-00009&amp;startdt=01/09/21&amp;enddt=01/02/22&amp;keycache=0.0796364461249851653384709551" ContentHash="PP_Z-eDr-kGGb-XBRyz1WQ" DesignTimeRectangle="804, 89, 165, 38" ElementType="Button" FriendlyName="'View Control Chart'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='reload' tag='BUTTON' aaname='View Control Chart' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='reload' tag='BUTTON' aaname='View Control Chart' type='' check:text='View Control Chart' /&gt;" Guid="d10acf0e-3029-455c-9fd7-d6e9cf01a1ff" ImageBase64="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" Reference="hXRIDoZ-JUO8jubA8vBAGQ/Baw9x9KaFk6890KFZlrkCw" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector" />
                     </uix:NClick.Target>
@@ -417,7 +417,7 @@
                       <OutArgument x:TypeArguments="x:String">[strUCL]</OutArgument>
                     </uix:NGetText.Text>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text 'TEXT_ID_NAME'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_4" Version="V1">
+                  <uix:NGetText DisplayName="Get Text 'TEXT_ID_NAME'" sap:VirtualizedContainerService.HintSize="334.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_4" Version="V1">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=200121-00001&amp;startdt=22/01/20&amp;enddt=22/01/23&amp;keycache=0.390912048257352931653539068108" ContentHash="_4bNf2Q320WFDKACZH5kcw" DesignTimeRectangle="239, 179, 375, 25" ElementType="Text" FriendlyName="'Xylene soluble'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='workstdid' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='workstdid' tag='DIV' type='' aaname='Xylene soluble' check:text='Xylene soluble' /&gt;" Guid="f9fee592-311c-493d-b1bb-18e6242ffb6a" ImageBase64="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" InformativeScreenshot="4e5236605714de009f1f38e745e14978.png" Reference="hXRIDoZ-JUO8jubA8vBAGQ/Any-A7czsUKKrnvhGlJY7w" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector">
                         <uix:TargetAnchorable.Anchors>
@@ -431,7 +431,7 @@
                       <OutArgument x:TypeArguments="x:String">[strParameterName]</OutArgument>
                     </uix:NGetText.Text>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text 'TEXT_AVG'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_5" Version="V1">
+                  <uix:NGetText DisplayName="Get Text 'TEXT_AVG'" sap:VirtualizedContainerService.HintSize="334.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_5" Version="V1">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="http://192.168.252.94:8080/lims/rc?command=page&amp;page=GenControlChartTest&amp;keyid1=200121-00002&amp;startdt=22/01/20&amp;enddt=22/01/23&amp;keycache=0.054722342629216491654512951935" ContentHash="QlAWcw2QB0GrHMt8WLLDwQ" DesignTimeRectangle="239, 543, 375, 25" ElementType="Text" FriendlyName="'2.9602'" FullSelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='avg' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='maintiframe' tag='IFRAME' /&gt;&lt;webctrl id='avg' tag='DIV' type='' aaname='2.9602' check:text='2.9602' /&gt;" Guid="b6292685-633a-4849-a6a6-a0b1511a0613" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXsAAAAdCAYAAABL5Mz4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASjSURBVHhe7dy/a+NIHAVw/RlqDWkMKdad3RquiCGNIcUZUgRzhVFpUiwiTTApjNjiSHWYLRacIuAUC74ioDQBuzhwigM3C95iCxUpVKRwkeLtjDRSZFm/NneV9D4wRaTx2GnejL4aSQMREZUew56IqAIY9kREFcCwJyKqAIY9EVEFMOyJiCqAYU9EVAGxsN/CWU5hDbpoH+rQNA3aQQvdwTUWz6pLQe7jNYzjOnQ5hl5HJ28Mx8bkvP/2vVoN1j/qXITzYKHfrPl90sZ9dbH+e4LhWRutAzmWBv2wjf7lDOsX1YeIqEJ2w/7HFN0wRE1YYwvD34PA7mH2Q/XLsbnpeZ/RD3sYijHMQQc1Ncb0u+oUsbnt++fFxNI/t/zvPWvBWqoOSuq4zREW0RBfjsKJyh/PhHGkJgjRd7VV/YiIKiIW9jOYVzacV/W3svnS9VfHH22x9s/xbYKODNWTKTbqkOQ+mGio4446Jm1FMLfE8dbH+d737tjaMPX9YN/eD70JoDFeqSPCUlxV3Kzhqj99WywuGt7/0fkc/WVEROVXrGbvzmHIoP5tshPgSVaf/EAd3senBRezMzGG1sHkmzqEFaymOHaUP6771fDG7d5EpwpJjPFBjKGLSUAdSfVk+RPOeYFJi4ioRIqFvVhVD2VIfrBEtGZxMDuVgd7FNKHkE1whGF/VmluFb/9udw2eZHUla/k6Rgl1/MWF/M52ZBJJIa462vL/GMxjq34ionIrFvbBijg3JB1MT9LDXpZcoqvzzV9tL6Sv721cDzqoyzKNOF9r9jG6W0dW3y7mg/Rx/YlAwyhW449z7/pev8an7CmLiKhsCoT9Fva5H6b5K3DZV4ZyA9aTOhQV3Di9lAWXoK9sOurHBsyxBevCQEftoGldrVTgZ08izk3siiHRBpMjOUbKbyMiKrHcsA9uoBapq0vB6lk/3b1BKzk3/rnuF3kmCHCxsn+KVdBdG6asw4f1/WJhv1/PfxPu5GG9nogqKDvsv0/Rk6WVlC2TyTaYnvpXAsEWSW+1Hu6fD0I5O8D9Eo+G3m1+37yVfThhxbdoEhFVRHrYvywwkjtltBZGy19cC786sMdvD0jphx0Yf9pYfJahHNxkzQ5wPJr+Z69kff0/1OzfNWEREZVLcti/rDHxVufvCPoMi0s55hC2GnJxKQM8eYdNeDPXK/m8czfOsw1TTlgMeiKquP2wfw3KMCLoH//HDYrPcxhihR19MCvYO7/zQJTi79fXYT74veM7ed6k7LN31ZUJg56IKBb20RV9gaD3V+aiebtrMrgikI/FuCJ4d165EDwVGw/koPTSjOzr/5UnaLmiJyLasRP2wY3O+snQez9NUpss3yaBtLB37ozwHTfy/TXe/nm9Ayu+60YIb57qdfTkZ857qn97r4SU+m6cAwPzyMvQgt/V/mO09/uDNs97AIuIqEQSwz6rRcso6WHf90JZnqs1uzDGM6wzLhTcf2cYnbX84NZqaJ1ZsFN2URZ562X4uzJa3gNYRERlknyDloiISoVhT0RUAQx7IqIKYNgTEVUAw56IqALCsL+9vWVjY2NjK1kLcGVPRFR6wE8PF5qdozZngQAAAABJRU5ErkJggg==" InformativeScreenshot="f22ff35aadaa6c2a3847bc8cea7a8417.png" Reference="hXRIDoZ-JUO8jubA8vBAGQ/vk11-v0ZRk6fVQ-YLcOeEA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='unnamed' title='Control Chart' /&gt;" SearchSteps="Selector">
                         <uix:TargetAnchorable.Anchors>
@@ -509,7 +509,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <If Condition="[not dtLimsData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="1039.2,2520.8" sap2010:WorkflowViewState.IdRef="If_24">
+                <If Condition="[not dtLimsData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="1039.2,2528" sap2010:WorkflowViewState.IdRef="If_24">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -517,13 +517,13 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="1004,2332" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                    <Sequence sap:VirtualizedContainerService.HintSize="1004,2339.2" sap2010:WorkflowViewState.IdRef="Sequence_80">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="First condition" sap:VirtualizedContainerService.HintSize="962.4,1895.2" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                      <Sequence DisplayName="First condition" sap:VirtualizedContainerService.HintSize="962.4,1902.4" sap2010:WorkflowViewState.IdRef="Sequence_58">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="strDataID" />
                         </Sequence.Variables>
@@ -562,11 +562,11 @@
                             <InArgument x:TypeArguments="sd:DataColumn[]">[new System.Data.DataColumn() { dtLimsData.Columns("Sample ID") }]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[dtSQL.RowCount &gt; 0]" sap:VirtualizedContainerService.HintSize="921,1373" sap2010:WorkflowViewState.IdRef="If_18">
+                        <If Condition="[dtSQL.RowCount &gt; 0]" sap:VirtualizedContainerService.HintSize="920.8,1380" sap2010:WorkflowViewState.IdRef="If_18">
                           <If.Then>
-                            <If Condition="[dtLimsData.Rows.Contains(dtSQL.Rows(0).Item(&quot;SAMPLE_ID&quot;))]" sap:VirtualizedContainerService.HintSize="885,1187" sap2010:WorkflowViewState.IdRef="If_26">
+                            <If Condition="[dtLimsData.Rows.Contains(dtSQL.Rows(0).Item(&quot;SAMPLE_ID&quot;))]" sap:VirtualizedContainerService.HintSize="884,1191.2" sap2010:WorkflowViewState.IdRef="If_26">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="849,1001" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                <Sequence sap:VirtualizedContainerService.HintSize="848.8,1002.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="sd:DataTable" Name="dtSQLTemp" />
                                     <Variable x:TypeArguments="sd:DataTable" Name="dtTableTemp" />
@@ -635,7 +635,7 @@
                                       </ActivityAction>
                                     </ui:ForEachRow.Body>
                                   </ui:ForEachRow>
-                                  <ui:Break sap:VirtualizedContainerService.HintSize="807,22" sap2010:WorkflowViewState.IdRef="Break_2" />
+                                  <ui:Break sap:VirtualizedContainerService.HintSize="807.2,22.4" sap2010:WorkflowViewState.IdRef="Break_2" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
@@ -757,7 +757,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Sequence DisplayName="Prepare data" sap:VirtualizedContainerService.HintSize="1152.8,5460.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
+    <Sequence DisplayName="Prepare data" sap:VirtualizedContainerService.HintSize="1152.8,5528.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="intDataLack" />
         <Variable x:TypeArguments="s:DateTime" Name="dateTimeTemp" />
@@ -769,7 +769,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[dtLimsData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="515.2,304" sap2010:WorkflowViewState.IdRef="If_25">
+      <If Condition="[dtLimsData.RowCount = 0]" sap:VirtualizedContainerService.HintSize="513.6,304" sap2010:WorkflowViewState.IdRef="If_25">
         <If.Then>
           <Sequence sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_82">
             <sap:WorkflowViewStateService.ViewState>
@@ -790,7 +790,7 @@
           </Sequence>
         </If.Else>
       </If>
-      <Assign sap:VirtualizedContainerService.HintSize="515.2,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+      <Assign sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_18">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[intDataLack]</OutArgument>
         </Assign.To>
@@ -798,16 +798,16 @@
           <InArgument x:TypeArguments="x:Int32">[(15+intThisDayLimsReportCount)-dtLimsData.RowCount]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleWhile Condition="[intDataLack&lt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="515.2,544" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+      <ui:InterruptibleWhile Condition="[intDataLack&lt;0]" DisplayName="While" sap:VirtualizedContainerService.HintSize="513.6,548" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
         <ui:InterruptibleWhile.Body>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="343,377" sap2010:WorkflowViewState.IdRef="Sequence_77">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="338.4,380.8" sap2010:WorkflowViewState.IdRef="Sequence_77">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RemoveDataRow Row="{x:Null}" DataTable="[dtLimsData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="301,185" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0" />
-            <Assign sap:VirtualizedContainerService.HintSize="301,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+            <ui:RemoveDataRow Row="{x:Null}" DataTable="[dtLimsData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="296.8,188" sap2010:WorkflowViewState.IdRef="RemoveDataRow_2" RowIndex="0" />
+            <Assign sap:VirtualizedContainerService.HintSize="296.8,60" sap2010:WorkflowViewState.IdRef="Assign_19">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[intDataLack]</OutArgument>
               </Assign.To>
@@ -824,7 +824,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InterruptibleWhile>
-      <Assign sap:VirtualizedContainerService.HintSize="515,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+      <Assign sap:VirtualizedContainerService.HintSize="513.6,60" sap2010:WorkflowViewState.IdRef="Assign_37">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strInsertQuery]</OutArgument>
         </Assign.To>
@@ -834,13 +834,13 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtLimsData]" DisplayName="(loop) Insert data to SQL" sap:VirtualizedContainerService.HintSize="515,4112" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtLimsData]" DisplayName="(loop) Insert data to SQL" sap:VirtualizedContainerService.HintSize="513.6,4174.4" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="481,3992" sap2010:WorkflowViewState.IdRef="Sequence_72">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,4053.6" sap2010:WorkflowViewState.IdRef="Sequence_72">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="strInsertITEM_ID" />
                 <Variable x:TypeArguments="x:String" Name="strInserPARAMETER_NAME" />
@@ -868,7 +868,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="439,689" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="438.4,693.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -1044,7 +1044,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MultipleAssign>
-              <Assign sap:VirtualizedContainerService.HintSize="439,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+              <Assign sap:VirtualizedContainerService.HintSize="438.4,60" sap2010:WorkflowViewState.IdRef="Assign_38">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strInsertSAMPLING_DATE]</OutArgument>
                 </Assign.To>
@@ -1052,8 +1052,8 @@
                   <InArgument x:TypeArguments="x:String" xml:space="preserve">[Datetime.ParseExact(CurrentRow.Item("Sampling date").ToString ,  strUserDateFormat ,System.Globalization.CultureInfo.InvariantCulture).ToString(strSQLDateFormat)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="439,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
-              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="439,3009" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[strInsertQuery]" SourceText="[strInsertQuery]">
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="438.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+              <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="438.4,3064.8" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[strInsertQuery]" SourceText="[strInsertQuery]">
                 <ui:ModifyText.Body>
                   <ActivityAction>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_76">
@@ -1062,24 +1062,24 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_1" ReplaceText="[strInsertITEM_ID]" SearchText="strInsertITEM_ID" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_2" ReplaceText="[strInserPARAMETER_NAME]" SearchText="strInserPARAMETER_NAME" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_3" ReplaceText="[strInsertSAMPLE_ID]" SearchText="strInsertSAMPLE_ID" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_4" ReplaceText="[strInsertCURRENT_VALUE]" SearchText="strInsertCURRENT_VALUE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_5" ReplaceText="[strInsertUCL_VALUE]" SearchText="strInsertUCL_VALUE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_6" ReplaceText="[strInsertLCL_VALUE]" SearchText="strInsertLCL_VALUE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_7" ReplaceText="[strInsertAVG_VALUE]" SearchText="strInsertAVG_VALUE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_8" ReplaceText="[strInsertNORMAL_VALUE]" SearchText="strInsertNORMAL_VALUE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_9" ReplaceText="[strInsertBEYOND_OVER]" SearchText="strInsertBEYOND_OVER" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_10" ReplaceText="[strInsertBEYOND_UNDER]" SearchText="strInsertBEYOND_UNDER" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_11" ReplaceText="[strInsertBIAS_LWL]" SearchText="strInsertBIAS_LWL" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_12" ReplaceText="[strInsertBIAS_UWL]" SearchText="strInsertBIAS_UWL" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_13" ReplaceText="[strInsertTREND_UP]" SearchText="strInsertTREND_UP" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_14" ReplaceText="[strInsertTREND_DOWN]" SearchText="strInsertTREND_DOWN" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_15" ReplaceText="[strInsertOVER_CONTROL]" SearchText="strInsertOVER_CONTROL" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_16" ReplaceText="[strInsertCREATE_DATE]" SearchText="strInsertCREATE_DATE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_17" ReplaceText="[strInsertUPDATE_DATE]" SearchText="strInsertUPDATE_DATE" />
-                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387,147" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_29" ReplaceText="[strInsertSAMPLING_DATE]" SearchText="strInsertSAMPLING_DATE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_1" ReplaceText="[strInsertITEM_ID]" SearchText="strInsertITEM_ID" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_2" ReplaceText="[strInserPARAMETER_NAME]" SearchText="strInserPARAMETER_NAME" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_3" ReplaceText="[strInsertSAMPLE_ID]" SearchText="strInsertSAMPLE_ID" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_4" ReplaceText="[strInsertCURRENT_VALUE]" SearchText="strInsertCURRENT_VALUE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_5" ReplaceText="[strInsertUCL_VALUE]" SearchText="strInsertUCL_VALUE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_6" ReplaceText="[strInsertLCL_VALUE]" SearchText="strInsertLCL_VALUE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_7" ReplaceText="[strInsertAVG_VALUE]" SearchText="strInsertAVG_VALUE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_8" ReplaceText="[strInsertNORMAL_VALUE]" SearchText="strInsertNORMAL_VALUE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_9" ReplaceText="[strInsertBEYOND_OVER]" SearchText="strInsertBEYOND_OVER" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_10" ReplaceText="[strInsertBEYOND_UNDER]" SearchText="strInsertBEYOND_UNDER" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_11" ReplaceText="[strInsertBIAS_LWL]" SearchText="strInsertBIAS_LWL" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_12" ReplaceText="[strInsertBIAS_UWL]" SearchText="strInsertBIAS_UWL" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_13" ReplaceText="[strInsertTREND_UP]" SearchText="strInsertTREND_UP" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_14" ReplaceText="[strInsertTREND_DOWN]" SearchText="strInsertTREND_DOWN" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_15" ReplaceText="[strInsertOVER_CONTROL]" SearchText="strInsertOVER_CONTROL" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_16" ReplaceText="[strInsertCREATE_DATE]" SearchText="strInsertCREATE_DATE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_17" ReplaceText="[strInsertUPDATE_DATE]" SearchText="strInsertUPDATE_DATE" />
+                      <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="387.2,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_29" ReplaceText="[strInsertSAMPLING_DATE]" SearchText="strInsertSAMPLING_DATE" />
                     </Sequence>
                   </ActivityAction>
                 </ui:ModifyText.Body>
@@ -1100,13 +1100,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Insert new Data query" ExistingDbConnection="[sqlConnect]" sap:VirtualizedContainerService.HintSize="515,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="[strInsertQuery]">
+      <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Insert new Data query" ExistingDbConnection="[sqlConnect]" sap:VirtualizedContainerService.HintSize="513.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="[strInsertQuery]">
         <ui:ExecuteQuery.Parameters>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:ExecuteQuery.Parameters>
       </ui:ExecuteQuery>
     </Sequence>
-    <Assign sap:VirtualizedContainerService.HintSize="1153,60" sap2010:WorkflowViewState.IdRef="Assign_28">
+    <Assign sap:VirtualizedContainerService.HintSize="1152.8,60" sap2010:WorkflowViewState.IdRef="Assign_28">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dtPresentData]</OutArgument>
       </Assign.To>
