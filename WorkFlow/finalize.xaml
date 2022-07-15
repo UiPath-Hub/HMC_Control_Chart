@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>932,8515.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>864.8,8979.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>finalize_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
@@ -99,7 +99,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="finalize" sap:VirtualizedContainerService.HintSize="868,8410.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="finalize" sap:VirtualizedContainerService.HintSize="865.6,8914.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtNewTableFormat" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtWeeklyTableHeader" />
@@ -110,10 +110,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[not (in_TriggerReport is Nothing)]" sap:VirtualizedContainerService.HintSize="826.4,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[not (in_TriggerReport is Nothing)]" sap:VirtualizedContainerService.HintSize="824,446.4" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -509,7 +509,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Sequence DisplayName="weekly report" sap:VirtualizedContainerService.HintSize="826.4,8224.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
+    <Sequence DisplayName="weekly report" sap:VirtualizedContainerService.HintSize="824,8335.2" sap2010:WorkflowViewState.IdRef="Sequence_48">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strMailAddress" />
         <Variable x:TypeArguments="x:String" Name="strCC" />
@@ -525,7 +525,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="784.8,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+      <Assign sap:VirtualizedContainerService.HintSize="782.4,60" sap2010:WorkflowViewState.IdRef="Assign_12">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strTemplateFile]</OutArgument>
         </Assign.To>
@@ -533,8 +533,8 @@
           <InArgument x:TypeArguments="x:String">[in_CONFIG("strMailWeeklyReportTemp").ToString+"delete.docx"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[strTemplateFile]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="784.8,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" />
-      <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[strTemplateFile]" sap:VirtualizedContainerService.HintSize="784.8,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_3">
+      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[strTemplateFile]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="782.4,160" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[in_CONFIG(&quot;strMailWeeklyReportTemp&quot;).ToString]" />
+      <p:WordApplicationScope AutoSave="False" CreateNewFile="False" DisplayName="Word Application Scope" FilePath="[strTemplateFile]" sap:VirtualizedContainerService.HintSize="782.4,492.8" sap2010:WorkflowViewState.IdRef="WordApplicationScope_3">
         <p:WordApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WordDocument">
             <ActivityAction.Argument>
@@ -552,8 +552,8 @@
           </ActivityAction>
         </p:WordApplicationScope.Body>
       </p:WordApplicationScope>
-      <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="784.8,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[strTemplateFile]" />
-      <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="784.8,344.8" sap2010:WorkflowViewState.IdRef="ModifyText_7" OutputText="[strTemplateRead]" SourceText="[strTemplateRead]">
+      <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="782.4,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[strTemplateFile]" />
+      <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="782.4,344.8" sap2010:WorkflowViewState.IdRef="ModifyText_7" OutputText="[strTemplateRead]" SourceText="[strTemplateRead]">
         <ui:ModifyText.Body>
           <ActivityAction>
             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_65">
@@ -567,7 +567,7 @@
           </ActivityAction>
         </ui:ModifyText.Body>
       </ui:ModifyText>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="784.8,811.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="782.4,811.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
@@ -614,7 +614,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="784.8,226.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="782.4,226.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
@@ -660,9 +660,9 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="784.8,231.2" sap2010:WorkflowViewState.IdRef="CommentOut_6">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_74">
+      <If Condition="[not ((in_CONFIG(&quot;strTestDate&quot;).ToString is Nothing) OR (in_CONFIG(&quot;strTestDate&quot;).ToString.Trim = &quot;&quot;))]" sap:VirtualizedContainerService.HintSize="782.4,341.6" sap2010:WorkflowViewState.IdRef="If_19">
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_75">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -673,19 +673,28 @@
                 <OutArgument x:TypeArguments="s:DateTime">[Test]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="s:DateTime">[Datetime.ParseExact("11/09/2021", in_CONFIG("strUserDateFormat").ToString,System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                <InArgument x:TypeArguments="s:DateTime">[Datetime.ParseExact(in_CONFIG("strTestDate").ToString, in_CONFIG("strUserDateFormat").ToString,System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
               </Assign.Value>
             </Assign>
           </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
-      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="784.8,5404.8" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[Enumerable.Range(0, dtWeeklyTableHeader.ColumnCount)]">
+        </If.Then>
+        <If.Else>
+          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_76">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each find Present-date cell" sap:VirtualizedContainerService.HintSize="782.4,5404.8" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[Enumerable.Range(0, dtWeeklyTableHeader.ColumnCount)]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="HeaderIndex" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="749.6,5280" sap2010:WorkflowViewState.IdRef="Sequence_61">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="747.2,5280" sap2010:WorkflowViewState.IdRef="Sequence_61">
               <Sequence.Variables>
                 <Variable x:TypeArguments="s:DateTime" Name="dateStartDateCompare" />
                 <Variable x:TypeArguments="s:DateTime" Name="dateStartDateBefore" />
@@ -696,7 +705,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="708,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_14">
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="705.6,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_14">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_37">
@@ -726,7 +735,7 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <If Condition="[((dateStartDateCompare &lt;= Test) and (dateStartDateCompare.AddDays(1) &gt;= Test))]" sap:VirtualizedContainerService.HintSize="708,4983.2" sap2010:WorkflowViewState.IdRef="If_15">
+              <If Condition="[((dateStartDateCompare &lt;= Test) and (dateStartDateCompare.AddDays(1) &gt;= Test))]" sap:VirtualizedContainerService.HintSize="705.6,4983.2" sap2010:WorkflowViewState.IdRef="If_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -734,9 +743,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <If Condition="[not (in_CONFIG(&quot;strSendWeeklyReportDate&quot;).ToString = Now.ToString(in_CONFIG(&quot;strUserDateFormat&quot;).ToString))]" sap:VirtualizedContainerService.HintSize="672.8,4794.4" sap2010:WorkflowViewState.IdRef="If_14">
+                  <If Condition="[not (in_CONFIG(&quot;strSendWeeklyReportDate&quot;).ToString = Test.ToString(in_CONFIG(&quot;strUserDateFormat&quot;).ToString) OR dtWeeklyTableHeader.Rows()( HeaderIndex))]" sap:VirtualizedContainerService.HintSize="670.4,4794.4" sap2010:WorkflowViewState.IdRef="If_14">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="637.6,4605.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                      <Sequence sap:VirtualizedContainerService.HintSize="635.2,4605.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="ui:DatabaseConnection" Name="sqlConnect" />
                           <Variable x:TypeArguments="sd:DataTable" Name="dtWeeklyQuery" />
@@ -750,14 +759,14 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CTRL_ReportExecutionWeekly" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="596,134.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[Now.ToString(in_CONFIG(&quot;strUserDateFormat&quot;).ToString)]" />
-                        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="596,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionSecureString="[in_CREDENTIALLIST(&quot;SQLConnectionString&quot;).ElementAt(0).Value]" DatabaseConnection="[sqlConnect]" />
-                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dtWeeklyQuery]" DisplayName="Run query" ExistingDbConnection="[sqlConnect]" sap:VirtualizedContainerService.HintSize="596,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT * FROM [dbo].[LIMS_CTRLLOGS] WHERE [SAMPLING_DATE] &gt;= '&quot;+dateStartDateBefore.ToString(in_CONFIG(&quot;strSQLDateFormat&quot;).ToString)+&quot;' AND [SAMPLING_DATE] &lt;= '&quot;+ dateEndDateBefore.ToString(in_CONFIG(&quot;strSQLDateFormat&quot;).ToString)+&quot;' AND [UPDATE_DATE] is not Null AND [NORMAL_VALUE] = 0&quot;]">
+                        <ui:SetAsset TimeoutMS="{x:Null}" AssetName="[in_CONFIG(&quot;strWeeklyReportStampDateName&quot;).ToString]" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="593.6,134.4" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[Test.ToString(in_CONFIG(&quot;strUserDateFormat&quot;).ToString)]" />
+                        <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="593.6,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionSecureString="[in_CREDENTIALLIST(&quot;SQLConnectionString&quot;).ElementAt(0).Value]" DatabaseConnection="[sqlConnect]" />
+                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[dtWeeklyQuery]" DisplayName="Run query" ExistingDbConnection="[sqlConnect]" sap:VirtualizedContainerService.HintSize="593.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT * FROM [dbo].[LIMS_CTRLLOGS] WHERE [SAMPLING_DATE] &gt;= '&quot;+dateStartDateBefore.ToString(in_CONFIG(&quot;strSQLDateFormat&quot;).ToString)+&quot;' AND [SAMPLING_DATE] &lt;= '&quot;+ dateEndDateBefore.ToString(in_CONFIG(&quot;strSQLDateFormat&quot;).ToString)+&quot;' AND [UPDATE_DATE] is not Null AND [NORMAL_VALUE] = 0&quot;]">
                           <ui:ExecuteQuery.Parameters>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                           </ui:ExecuteQuery.Parameters>
                         </ui:ExecuteQuery>
-                        <If Condition="[dtWeeklyQuery.RowCount = 0]" sap:VirtualizedContainerService.HintSize="596,304" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If Condition="[dtWeeklyQuery.RowCount = 0]" sap:VirtualizedContainerService.HintSize="593.6,304" sap2010:WorkflowViewState.IdRef="If_17">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_68">
                               <sap:WorkflowViewStateService.ViewState>
@@ -778,8 +787,8 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <ui:BuildDataTable DataTable="[dtNewTableFormat]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="596,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Item_x0020_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Parameter_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Sampling_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Update_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtWeeklyQuery]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="596,853.6" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                        <ui:BuildDataTable DataTable="[dtNewTableFormat]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="593.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Item_x0020_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Parameter_x0020_Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Sampling_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Update_x0020_Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtWeeklyQuery]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="593.6,853.6" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
@@ -889,7 +898,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEachRow>
-                        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,911.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="593.6,911.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
                           <ueab:ExcelProcessScopeX.Body>
                             <ActivityAction x:TypeArguments="ui:IExcelProcess">
                               <ActivityAction.Argument>
@@ -935,7 +944,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ueab:ExcelProcessScopeX>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="596,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="593.6,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_34">
@@ -965,7 +974,7 @@
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <umab:CreateHtmlContent DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="596,152.8" HtmlContent="[strBody]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_2">
+                        <umab:CreateHtmlContent DisplayName="Create HTML Content" sap:VirtualizedContainerService.HintSize="593.6,152.8" HtmlContent="[strBody]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_2">
                           <umab:CreateHtmlContent.HtmlContentArg>
                             <umabh:HtmlContentArgument FilePath=".data/HtmlContent1.html">
                               <umabh:HtmlContentArgument.RuntimeImages>
@@ -982,7 +991,7 @@
                             </umabh:HtmlContentArgument>
                           </umab:CreateHtmlContent.HtmlContentArg>
                         </umab:CreateHtmlContent>
-                        <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="596,1144.8" sap2010:WorkflowViewState.IdRef="ModifyText_5" OutputText="[strBody]" SourceText="[strBody]">
+                        <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="593.6,1144.8" sap2010:WorkflowViewState.IdRef="ModifyText_5" OutputText="[strBody]" SourceText="[strBody]">
                           <ui:ModifyText.Body>
                             <ActivityAction>
                               <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_60">
@@ -1001,7 +1010,7 @@
                             </ActivityAction>
                           </ui:ModifyText.Body>
                         </ui:ModifyText>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="596,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WorkFlow\send mail.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="593.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WorkFlow\send mail.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_CONFIG">[in_CONFIG]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_SUBJECT">[strSubjectMail]</InArgument>
@@ -1012,8 +1021,8 @@
                             <InArgument x:TypeArguments="x:String" x:Key="in_CC">[strCC]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:DatabaseDisconnect DatabaseConnection="[sqlConnect]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="596,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
-                        <ui:Break sap:VirtualizedContainerService.HintSize="596,22" sap2010:WorkflowViewState.IdRef="Break_4" />
+                        <ui:DatabaseDisconnect DatabaseConnection="[sqlConnect]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="593.6,22.4" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+                        <ui:Break sap:VirtualizedContainerService.HintSize="593.6,22.4" sap2010:WorkflowViewState.IdRef="Break_4" />
                       </Sequence>
                     </If.Then>
                     <If.Else>
@@ -1040,6 +1049,12 @@
             </Sequence>
           </ActivityAction>
         </ui:ForEach.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
   </Sequence>

@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1184,28733.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1184,29055.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -103,7 +103,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1194.4,28628.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1194.4,28990.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strURL" />
       <Variable x:TypeArguments="x:String" Name="strUserName" />
@@ -144,7 +144,71 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1152.8,600.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <If Condition="[not ((in_CONFIG(&quot;strTestDate&quot;).ToString is Nothing) OR (in_CONFIG(&quot;strTestDate&quot;).ToString.Trim = &quot;&quot;))]" sap:VirtualizedContainerService.HintSize="1152.8,384" sap2010:WorkflowViewState.IdRef="If_41">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="472,224.8" sap2010:WorkflowViewState.IdRef="Sequence_135">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_39">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strStartDate]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[in_CONFIG("strTestDate").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strEndDate]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[in_CONFIG("strTestDate").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="472,224.8" sap2010:WorkflowViewState.IdRef="Sequence_136">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_61">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strStartDate]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Now.ToString(in_CONFIG("strUserDateFormat").ToString)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_62">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strEndDate]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Now.ToString(in_CONFIG("strUserDateFormat").ToString)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1152.8,538.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -169,22 +233,6 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">[in_CONFIG("strUserDateFormat").ToString]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_39">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[strStartDate]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">14/09/2021</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[strEndDate]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">14/09/2021</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_40">
@@ -1462,7 +1510,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="679.2,504.8" sap2010:WorkflowViewState.IdRef="ModifyText_6" OutputText="[strPresentDataQuery]" SourceText="SELECT TOP @intTOP [ITEM_ID]&#xD;&#xA;      ,[PARAMETER_NAME]&#xD;&#xA;      ,[SAMPLE_ID],[SAMPLING_DATE]&#xD;&#xA;      ,[CURRENT_VALUE]&#xD;&#xA;      ,[UCL_VALUE]&#xD;&#xA;      ,[LCL_VALUE]&#xD;&#xA;      ,[AVG_VALUE]&#xD;&#xA;      ,[NORMAL_VALUE]&#xD;&#xA;      ,[BEYOND_UPPER]&#xD;&#xA;      ,[BEYOND_LOWER]&#xD;&#xA;      ,[BIAS_UWL]&#xD;&#xA;      ,[BIAS_LWL]&#xD;&#xA;      ,[TREND_UP]&#xD;&#xA;      ,[TREND_DOWN]&#xD;&#xA;      ,[OVER_CONTROL]&#xD;&#xA;      ,[CREATE_DATE],[UPDATE_DATE]&#xD;&#xA;  FROM [dbo].[LIMS_CTRLLOGS] WHERE [ITEM_ID] = '@strItemID' ORDER BY [UPDATE_DATE] DESC">
+                    <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="679.2,504.8" sap2010:WorkflowViewState.IdRef="ModifyText_6" OutputText="[strPresentDataQuery]" SourceText="SELECT TOP @intTOP [ITEM_ID]&#xA;      ,[PARAMETER_NAME]&#xA;      ,[SAMPLE_ID],[SAMPLING_DATE]&#xA;      ,[CURRENT_VALUE]&#xA;      ,[UCL_VALUE]&#xA;      ,[LCL_VALUE]&#xA;      ,[AVG_VALUE]&#xA;      ,[NORMAL_VALUE]&#xA;      ,[BEYOND_UPPER]&#xA;      ,[BEYOND_LOWER]&#xA;      ,[BIAS_UWL]&#xA;      ,[BIAS_LWL]&#xA;      ,[TREND_UP]&#xA;      ,[TREND_DOWN]&#xA;      ,[OVER_CONTROL]&#xA;      ,[CREATE_DATE],[UPDATE_DATE]&#xA;  FROM [dbo].[LIMS_CTRLLOGS] WHERE [ITEM_ID] = '@strItemID' ORDER BY [UPDATE_DATE] DESC">
                       <ui:ModifyText.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_103">
