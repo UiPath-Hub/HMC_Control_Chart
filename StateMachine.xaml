@@ -856,7 +856,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Transition.Condition>[not ((systemError is Nothing) AND (businessError is Nothing))]</Transition.Condition>
                                   <Transition.To>
-                                    <State x:Name="__ReferenceID1" DisplayName="Error Handler" sap:VirtualizedContainerService.HintSize="133.6,84.8" sap2010:WorkflowViewState.IdRef="State_6">
+                                    <State x:Name="__ReferenceID1" DisplayName="Error Handler" sap:VirtualizedContainerService.HintSize="1127.2,5038.4" sap2010:WorkflowViewState.IdRef="State_6">
                                       <State.Entry>
                                         <Sequence sap:VirtualizedContainerService.HintSize="1082.4,4676.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                           <Sequence.Variables>
@@ -922,7 +922,7 @@
                                                   </If.Else>
                                                 </If>
                                                 <ui:SaveImage DisplayName="Save Image" FileName="[dictConfig(&quot;strReportPath&quot;).ToString+&quot;\ErrorImage.png&quot;]" sap:VirtualizedContainerService.HintSize="483.2,134.4" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[imgScreenShot]" />
-                                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="483.2,226.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,226.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                                                   <ui:MultipleAssign.AssignOperations>
                                                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                                                       <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -930,7 +930,7 @@
                                                           <OutArgument x:TypeArguments="x:String">[strErrorMessage]</OutArgument>
                                                         </ui:AssignOperation.To>
                                                         <ui:AssignOperation.Value>
-                                                          <InArgument x:TypeArguments="x:String">["Error Type : System Error"+Environment.NewLine+systemError.Source + Environment.NewLine + systemError.ToString]</InArgument>
+                                                          <InArgument x:TypeArguments="x:String">["Error Type : Technical Error"+Environment.NewLine+systemError.Source + Environment.NewLine + systemError.ToString]</InArgument>
                                                         </ui:AssignOperation.Value>
                                                       </ui:AssignOperation>
                                                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
