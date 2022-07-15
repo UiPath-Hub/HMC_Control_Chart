@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_CONFIG" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_CREDENTIALLIST" Type="InArgument(scg:Dictionary(x:String, scg:Dictionary(x:String, ss:SecureString)))" />
+    <x:Property Name="out_CONFIG" Type="OutArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>953.6,4774.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>951.2,5130.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>init_UI_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -48,7 +49,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,10 +83,9 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="init_UI" sap:VirtualizedContainerService.HintSize="964,4709.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="init_UI" sap:VirtualizedContainerService.HintSize="961.6,5065.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strURL" />
       <Variable x:TypeArguments="x:String" Name="strHost" />
@@ -96,15 +96,49 @@
       <Variable x:TypeArguments="x:String" Name="strUserName" />
       <Variable x:TypeArguments="ss:SecureString" Name="sestrPassword" />
       <Variable x:TypeArguments="s:String[]" Name="arrstrTemplatePaths" />
+      <Variable x:TypeArguments="s:String[]" Name="arrstrTempNew" />
+      <Variable x:TypeArguments="x:Int32" Name="index" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="922.4,319.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="920,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">[in_CONFIG("strYearResult")]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">[in_CONFIG("strYearResult").ToString.Replace("2022",Now.ToString("yyyy"))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="920,381.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
-        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Object">[in_CONFIG("strReportPath")]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Object">[in_CONFIG("strFolderPath").ToString+in_CONFIG("strReportPath").ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:String[]">[arrstrTemplatePaths]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:String[]">[in_CONFIG("arrstrTemplatePaths").ToString.Split(","c)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="ss:SecureString">[sestrPassword]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="ss:SecureString">[in_CREDENTIALLIST("LimsLogin").ElementAt(0).Value]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[strHost]</OutArgument>
@@ -137,7 +171,7 @@
               <InArgument x:TypeArguments="s:String[]">[in_CONFIG("killApplicationList").ToString.Split(","c)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AssignOperation_5">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[strReportPath]</OutArgument>
             </ui:AssignOperation.To>
@@ -153,43 +187,75 @@
               <InArgument x:TypeArguments="x:String">[in_CREDENTIALLIST("LimsLogin").ElementAt(0).Key]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="ss:SecureString">[sestrPassword]</OutArgument>
+              <OutArgument x:TypeArguments="s:String[]">[arrstrTempNew]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="ss:SecureString">[in_CREDENTIALLIST("LimsLogin").ElementAt(0).Value]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="s:String[]">[arrstrTemplatePaths]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="s:String[]">[in_CONFIG("arrstrTemplatePaths").ToString.Split(","c)]</InArgument>
+              <InArgument x:TypeArguments="s:String[]">[arrstrTemplatePaths]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="922.4,349.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrkillApplicationList]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="920,277.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[arrstrTemplatePaths]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:String" Name="apName" />
+            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,224.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="[apName]" />
+            <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[arrstrTempNew(index)]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[in_CONFIG("strFolderPath").ToString+item]</InArgument>
+              </Assign.Value>
+            </Assign>
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <TryCatch DisplayName="Try open chrome" sap:VirtualizedContainerService.HintSize="433.6,270.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <Assign sap:VirtualizedContainerService.HintSize="920,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[arrstrTemplatePaths]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[arrstrTempNew]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="920,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Object">[in_CONFIG("arrstrTemplatePaths")]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Object">[arrstrTemplatePaths]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="920,352" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrkillApplicationList]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="apName" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,227.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="[apName]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <TryCatch DisplayName="Try open chrome" sap:VirtualizedContainerService.HintSize="920,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -240,7 +306,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch DisplayName="Try open excel" sap:VirtualizedContainerService.HintSize="433.6,270.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try open excel" sap:VirtualizedContainerService.HintSize="920,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -285,7 +351,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="922.4,696" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[arrstrTemplatePaths]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="920,696" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[arrstrTemplatePaths]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -326,26 +392,26 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:FolderExistsX DisplayName="Folder Exists" Exists="[blReportPathFound]" sap:VirtualizedContainerService.HintSize="922.4,134.4" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[strReportPath]" />
-    <If Condition="[not blReportPathFound]" sap:VirtualizedContainerService.HintSize="922.4,651.2" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:FolderExistsX DisplayName="Folder Exists" Exists="[blReportPathFound]" sap:VirtualizedContainerService.HintSize="920,134.4" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[strReportPath]" />
+    <If Condition="[not blReportPathFound]" sap:VirtualizedContainerService.HintSize="920,660" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,171" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="375.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[strReportPath]" />
+          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[strReportPath]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="502,492" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="500.8,500.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[strReportPath]" sap:VirtualizedContainerService.HintSize="460,400" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+          <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="[strReportPath]" sap:VirtualizedContainerService.HintSize="459.2,408" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
             <ui:ForEachFileX.Body>
               <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                 <ActivityAction.Argument1>
@@ -354,13 +420,13 @@
                 <ActivityAction.Argument2>
                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                 </ActivityAction.Argument2>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,171" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="425.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[strReportPath+CurrentFile.Name]" />
+                  <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,80.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[strReportPath+CurrentFile.Name]" />
                 </Sequence>
               </ActivityAction>
             </ui:ForEachFileX.Body>
@@ -368,7 +434,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome LabVantage Logon" sap:VirtualizedContainerService.HintSize="922.4,1645.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="592019aa-926e-4b08-8d53-0758261a3dc0" Version="V1" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome LabVantage Logon" sap:VirtualizedContainerService.HintSize="920,1645.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="592019aa-926e-4b08-8d53-0758261a3dc0" Version="V1" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -456,5 +522,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
+    <Assign sap:VirtualizedContainerService.HintSize="920,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_CONFIG]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[in_CONFIG]</InArgument>
+      </Assign.Value>
+    </Assign>
   </Sequence>
 </Activity>

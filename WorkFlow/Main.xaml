@@ -208,7 +208,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1152.8,538.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,538.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -296,7 +296,7 @@
               <OutArgument x:TypeArguments="x:String">[strCriteriaAnalyzeFile]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[in_CONFIG("strCriteriaAnalyzeFile").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[in_CONFIG("strFolderPath").ToString+ in_CONFIG("strCriteriaAnalyzeFile").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_44">
@@ -1491,7 +1491,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File Write" sap:VirtualizedContainerService.HintSize="754.4,3964.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" TemplatePath="Report_Control_Chart_Template.xlsx" UseTemplate="True" WorkbookPath="[in_CONFIG(&quot;strRawData&quot;).ToString]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File Write" sap:VirtualizedContainerService.HintSize="754.4,3964.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" TemplatePath="Report_Control_Chart_Template.xlsx" UseTemplate="True" WorkbookPath="[in_CONFIG(&quot;strFolderPath&quot;).ToString+ in_CONFIG(&quot;strRawData&quot;).ToString]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -1708,7 +1708,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelApplicationCard>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="754.4,2471.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" WorkbookPath="[in_CONFIG(&quot;strYearResult&quot;).ToString]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="754.4,2471.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" WorkbookPath="[in_CONFIG(&quot;strFolderPath&quot;).ToString+ in_CONFIG(&quot;strYearResult&quot;).ToString]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
