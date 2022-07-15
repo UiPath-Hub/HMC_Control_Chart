@@ -721,7 +721,7 @@
                         <OutArgument x:TypeArguments="s:DateTime">[dateStartDateBefore]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[Datetime.ParseExact(dtWeeklyTableHeader.Rows(4).Item( if(HeaderIndex-1&lt;0,0,HeaderIndex-1)).ToString, in_CONFIG("strUserDateFormat").ToString,System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" xml:space="preserve">[Datetime.ParseExact(dtWeeklyTableHeader.Rows(   if(HeaderIndex-1&lt;0,7,4)    ).Item(   if(HeaderIndex-1&lt;0,0,HeaderIndex-1)   ).ToString, in_CONFIG("strUserDateFormat").ToString,System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_39">
@@ -729,7 +729,7 @@
                         <OutArgument x:TypeArguments="s:DateTime">[dateEndDateBefore]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[Datetime.ParseExact(dtWeeklyTableHeader.Rows(5).Item(if(HeaderIndex-1&lt;0,0,HeaderIndex-1)).ToString,in_CONFIG("strUserDateFormat").ToString,System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" xml:space="preserve">[Datetime.ParseExact(dtWeeklyTableHeader.Rows(  if(HeaderIndex-1&lt;0,8,5)  ).Item(   if(HeaderIndex-1&lt;0,0,HeaderIndex-1)  ).ToString,in_CONFIG("strUserDateFormat").ToString,System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -743,7 +743,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <If Condition="[not (in_CONFIG(&quot;strSendWeeklyReportDate&quot;).ToString = Test.ToString(in_CONFIG(&quot;strUserDateFormat&quot;).ToString) OR dtWeeklyTableHeader.Rows()( HeaderIndex))]" sap:VirtualizedContainerService.HintSize="670.4,4794.4" sap2010:WorkflowViewState.IdRef="If_14">
+                  <If Condition="[(not (in_CONFIG(&quot;strSendWeeklyReportDate&quot;).ToString = Test.ToString(in_CONFIG(&quot;strUserDateFormat&quot;).ToString)) AND (dtWeeklyTableHeader.Rows(1)(HeaderIndex).ToString.ToLower=&quot;w1&quot;))]" sap:VirtualizedContainerService.HintSize="670.4,4794.4" sap2010:WorkflowViewState.IdRef="If_14">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="635.2,4605.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
                         <Sequence.Variables>
